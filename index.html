@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TO DO LIST</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: white;
+                width: auto;
+                height: auto;
+            }
+            h1{
+               background-color: lightblue;
+               font-family: 'Times New Roman', Times, serif;
+               font-size: 30px; 
+            }
+            input{
+                box-sizing: content-box;
+                box-shadow: none;
+                width:auto;
+                height: flex;
+            }
+            button{
+                border-radius: none;
+                background-color: beige;
+                border-radius: 25px;
+            }
+            button:hover{
+                background-color: aqua;
+                transition: ease 0.3s ;
+            }
+            ul{
+                padding: 25px;
+                font-family:cursive;
+                font-size: small;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 align="center">Task Manager</h1>
+            <div class="input-container">
+               <input type="text" id="List" placeholder="Enter Task">
+               <button onclick="addTask()">Enter</button>
+            </div>
+            <div>
+                <ul class="TaskList">
+                    <li id="Task"></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function addTask(){
+                let x=document.getElementById("List").value;
+                if(x===""){
+                    Report("Please Enter Text");
+                    return ;
+                }
+                document.getElementById("Task").innerHTML=x;
+            }
+        </script>
+        
+    </body>
+</html>
